@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #efefef;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        .pequenio {
+            width: 60px;
+        }
+
+        .mediano {
+            width: 200px;
+        }
+
+        .grande {
+            width: 100%;
+        }
+
+        table {
+            width: 100%;
+            max-width: 400px;
+            margin: auto;
+            /*centrada horizontalmente*/
+        }
+
+        textarea {
+            resize: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Formulario HTML</h1>
+        <article>
+            <h2>Formulario de búsqueda</h2>
+            <form action="http://google.es/search" method="get">
+                <!--action = donde vamos a enviar la informacion del form-->
+                <input type="text" name="q">
+                <input type="hidden" name="udm" value="2"><!--Sirve para enviar constantes-->
+                <input type="submit" value="buscar">
+                <input type="image" src="lupa.png">
+            </form>
+            <hr>
+            <h2>Inputs y propiedades</h2>
+            <form action="http://www.cursos-diseño.es/mostrar.php" method="post">
+                <table>
+                    <tr>
+                        <td>Apellidos</td>
+                        <td><input type="text" name="apellidos" class="grande"></td>
+                    </tr>
+                    <tr>
+                        <td>Código postal</td>
+                        <td><input type="text" name="cp" maxlength="5" minlength="5"
+                                class="pequenio"><!--Como maximo admita 5 y como minimo admita 5--></td>
+                    </tr>
+                    <tr>
+                        <td>Teléfono</td>
+                        <td><input type="text" name="telefono" placeholder="+34 123 45 67 89" class="mediano"></td>
+                        <!--Placeholder = sugerencia-->
+                    </tr>
+                    <!--Cuando el dato a introducir son cifras pero no indica una cantidad, será de tipo texto-->
+                    <tr>
+                        <td>Ciudad</td>
+                        <td><input type="text" name="ciudad" value="Madrid"></td>
+                        <!--valor predeterminado si el usuario no lo cambia-->
+                    </tr>
+                    <tr>
+                        <td>Contraseña</td>
+                        <td><input type="password" name="clave" class="pequenio">
+                            <input type="button" value="ver" onmousedown="document.getElementById('clave').type='text' "
+                                onmouseup="document.getElementById('clave').type='password'">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td><input type="email" name="email" placeholder="direccion@email.com" class="mediano"></td>
+                    </tr>
+                    <tr>
+                        <td>Comentarios</td>
+                        <td><textarea name="comentario" class="grande" rows="5"> </textarea> </td>
+                        <!--eliminar cambio de tamaño se hace desde css con resize: none-->
+                    </tr>
+                    <tr>
+                        <td>Edad</td>
+                        <td><input type="number" name="edad" value="25" min="18" max="65" class="pequenio"> </td>
+                    </tr>
+                    <tr>
+                        <td>Latas</td>
+                        <td><input type="number" name="latas" min="6" value="12" step="6" class="pequenio"></td>
+                    </tr>
+                    <tr>
+                        <td>Ingredientes</td>
+                        <td>
+                            <label>
+                                <input type="checkbox" name="tomate" value="si">
+                                Tomate
+                            </label> <br><!--label para que tambien se pueda pulsar en el texto y marcar-->
+                            <label>
+                                <input type="checkbox" name="alcaparras" value="si">
+                                Alcaparras
+                            </label><br>
+                            <label>
+                                <input type="checkbox" name="anchoas" value="si">
+                                Anchoas
+                            </label> <br>
+                            <label>
+                                <input type="checkbox" name="queso" value="si">
+                                Extra queso
+                            </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Horario</td>
+                        <td>
+                            <label>
+                                <input type="radio" name="horario" value="maniana"> Mañana
+                            </label> <br>
+                            <label>
+                                <input type="radio" name="horario" value="tarde"> Tarde <br>
+                            </label>
+                            <label>
+                                <input type="radio" name="horario" value="indiferente" checked> Indiferente<!--Opcion predeterminada-->
+                            </label>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Habitación</td>
+                        <td>
+                            <select name="habitacion">
+                                <option value="i1">Individual</option>
+                                <option value="d2">Doble 2 camas</option>
+                                <option value="d1">Doble matrimonio</option>
+                                <option value="t3">Triple 3 camas</option>
+                                <option value="t2">Triple con matrimonio + individual</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><input type="submit" value="comprobar"></td>
+                    </tr>
+                </table>
+
+
+
+            </form>
+
+
+
+        </article>
+    </header>
+
+</body>
+
+</html>

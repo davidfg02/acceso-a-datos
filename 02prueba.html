@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        table#primera {
+            background: lavender;
+            border-collapse: collapse;
+            font: 1.1rem 'Segoe UI', sans-serif; /*Principal primero, segundo alternativa. / comillas: es un string sin comillas: es una variable del sist*/
+
+        }
+        #primera th {
+            border: 3px solid white;
+        }
+        #primera td {
+            border-bottom: 3px solid white;
+            padding: 5px 20px; /*margen interior. Primero vertical, luego horizontal. si pones solo uno, igual por todos lados*/
+        }
+        #primera td:nth-child(2) { /*segunda columna*/
+            text-align: center;
+        }
+        #primera tr:nth-child(1) td { /*Primera fila*/
+            background: #333;
+            color: #d31111;
+            font-weight: bold;
+        }
+
+        #primera tr:nth-child(even) td { /*Filas pares*/
+            background: #ddd;
+        }
+        table#segunda{
+            background: aquamarine;
+            border-collapse: collapse;
+            font:1.1rem 'Segoe UI', sans-serif;
+        }
+        #segunda td {
+            border-bottom: 3px solid white;
+            border-left: 3px solid white;
+            padding: 5px 20px;
+        }
+        #segunda tr:nth-child(1) {
+            background: white;
+            font-weight: bold;
+        }
+        #segunda td:nth-child(2){
+            text-align:center;
+        }
+        #segunda td:nth-child(3){
+            text-align:right;
+        }
+        #segunda tr:nth-child(even){
+            background: lavender;
+        }
+    </style>
+</head>
+
+<body>
+    <!--table>tr*5>td*3 atajo emmet-->
+    <table id="primera">
+        <tr>
+            <th>Nombre</th>
+            <th>Teléfono</th>
+            <th>Ciudad</th>
+        </tr>
+        <tr>
+            <td>David</td>
+            <td>12345678</td>
+            <td>Madrid</td>
+        </tr>
+        <tr>
+            <td>Alba</td>
+            <td>8326765</td>
+            <td>Madrid</td>
+        </tr>
+        <tr>
+            <td>Pepe</td>
+            <td>3456876</td>
+            <td>Toledo</td>
+        </tr>
+        <tr>
+            <td>Luis</td>
+            <td>5556876</td>
+            <td>Valladolid</td>
+        </tr>
+    </table>
+<br><br>
+    <table id="segunda">
+        <tr>
+            <td>fruta</td>
+            <td>color</td>
+            <td>PVP</td>
+        </tr>
+        <tr>
+            <td>naranja</td>
+            <td>naranja</td>
+            <td>2.99</td>
+        </tr>
+        <tr>
+            <td>limon</td>
+            <td>amarillo</td>
+            <td>1.28</td>
+        </tr>
+        <tr>
+            <td>piña</td>
+            <td>amarillo</td>
+            <td>2.56</td>
+        </tr>
+        <tr>
+            <td>melon</td>
+            <td>verde</td>
+            <td>5.78</td>
+        </tr>
+        <tr>
+            <td>arandano</td>
+            <td>morado</td>
+            <td>3.03</td>
+        </tr>
+    </table>
+
+</body>
+
+</html>

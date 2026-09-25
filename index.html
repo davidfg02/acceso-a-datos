@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documento</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        } /*aplica a todos los elementos. Poner siempre*/
+        body {
+            font: '';
+        }
+
+        h1 {
+            font: 3rem 'Calibri';
+            color: #f2e
+        }
+
+        #foto {
+            width: 400px;
+            height: 400px;
+            object-fit: cover;
+        }
+
+        .fila {
+            display: flex;
+            gap: 40px;
+        }
+
+        .columna {
+            background: #f2e;
+            width: 400px;
+            height: 400px;
+        }
+
+        .form {
+            padding: 20px;
+            border: 3px solid black;
+            margin: 5px;
+        }
+
+        #nombre,
+        #correo,
+        #comentario {
+            width: 300px;
+        }
+        input, textarea {
+        width: 100%
+        }
+
+        #comentario {
+            height: 150px;
+        }
+
+        .button {
+            margin-top: 10px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>David Fraile</h1>
+    <p>18/09/2026</p>
+    <p>Madrid</p>
+    <p> <a href="https://www.udit.es/" target="_blank"> Universidad de Diseño, Innovación y Tecnología</a><br>
+        <a href="https://es.wikipedia.org/wiki/Roma"> Roma en la wikipedia</a>
+    </p>
+    <div class="fila">
+        <div class="columna">
+            <form  action="http://www.cursos-diseño.es/mostrar.php" method="get">
+                <label for="nombre"> Nombre</label> <br>
+                <input type="text" id="nombre" name="nombre"> <br>
+
+                <label for="correo"> Correo</label> <br>
+                <input type="email" id="correo" name="correo"> <br>
+
+                <label for="comentario"> Comentario</label> <br>
+                <textarea type="text" id="comentario" name="comentario"></textarea> <br>
+
+                <input type="submit"></input>
+
+            </form>
+        </div>
+        <div class="columna">
+            <img src="perrito.webp" alt="Foto perrito" id="foto">
+
+        </div>
+    </div>
+
+
+</body>
+
+</html>
