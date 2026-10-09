@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo maquetación</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        #container {
+            width: 1000px;
+            margin: auto;
+            padding: 30px;
+            background-color: aliceblue;
+        }
+
+        header {
+            background: blue;
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            text-align: center;
+            margin: 0;
+        }
+
+        #fila {
+            display: flex;
+            gap: 30px;
+        }
+
+        #izquierda {
+            width: 765px;
+            padding: 30px;
+        }
+
+        #derecha {
+            width: 205px;
+        }
+
+        .filaform {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 15px;
+        }
+
+        .columnaform {
+            width: 50%;
+        }
+
+        input {
+            width: 100%;
+            padding: 3px 8px;
+            font: 1rem "Segoe UI";
+        }
+
+        .mediano {
+            width: 300px;
+        }
+
+        input[type="checkbox"] {
+            width: auto;
+            margin-bottom: 0;
+        }
+
+        input[type="submit"] {
+            background: green;
+            width: 100px;
+            text-align: center;
+        }
+
+        input[type="submit"]:hover {
+            background: rgb(33, 201, 33);
+            width: 100px;
+            transform: scale(1.02);
+            transition: all 0.2s;
+        }
+
+
+
+        #lupa {
+            width: 40px;
+        }
+
+        #anuncio {
+            width: 205px;
+        }
+
+        .buscador {
+            margin-left: 10px;
+            display: flex;
+            gap: 10px
+        }
+
+        .buscador input {
+            width: 100px;
+        }
+
+        .buscador img {
+            width: 30px;
+            height: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <header>
+            <h1>PRUEBA DE MAQUETACIÓN</h1>
+        </header>
+        <div id="fila">
+            <div id="izquierda">
+                <h3>XXXXXXXXX</h3>
+                <P>Esto es un parrafo de ejemplo</P>
+                <form action="http://www.cursos-diseño.es/mostrar.php" method="post">
+                    <div class="filaform">
+                        <div class="columnaform">
+                            Nombre
+                            <input type="text" name="nombre" class="mediano">
+                        </div>
+                        <div class="columnaform">
+                            Apellidos
+                            <input type="text" name="apellidos" class="mediano">
+                        </div>
+                    </div>
+                    <div class="filaform">
+                        <div class="columnaform">
+                            Email
+                            <input type="email" name="email" class="mediano">
+                        </div>
+                        <div class="columnaform">
+                            Teléfono
+                            <input type="text" name="telefono" class="mediano">
+                        </div>
+                    </div>
+                    <br>
+                    <label>
+                        <input type="checkbox" name="terminos" value="si" required>
+                        Acepto los <a href="terminosycondiciones.html" target="_blank">términos y condiciones</a>
+                    </label>
+                    <div>
+                        <input type="submit" value="Enviar">
+                    </div>
+                </form>
+            </div>
+            <div id="derecha">
+                <img src="anuncio.gif" alt="anuncio" id="anuncio">
+
+                <div class="buscador">
+                    <form action="http://google.es/search" method="get">
+                        <input type="text" name="q" id="buscador">
+                        <input type="hidden" name="udm" value="2">
+                        <input type="image" src="lupa.png" id="lupa" alt="buscar">
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

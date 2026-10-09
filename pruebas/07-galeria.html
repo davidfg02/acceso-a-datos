@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        article {
+            padding: 30px;
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            /*Si el elemento no cabe en la misma fila, fluye a la siguiente*/
+            justify-content: center;
+            /*Pone el contenido en el centro si hay hueco*/
+        }
+
+        img {
+            width: 300px;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+        }
+
+        article div {
+            width: 320px;
+            height: 320px;
+            padding: 10px;
+            background-color: orange;
+            border: 1px solid #aaa;
+            box-shadow: 0 4px 8px #888;
+            transition: all 0.2s 0.8s; /*transición (a todos los cambios, en x segundos, manten x segundos)*/
+
+        }
+
+        article div:hover {
+            transform: scale(1.1) rotate(10deg);
+            /*Añade transiciones: scale()-> aumenta tamaño, rotate()->gira*/
+            transition: all 0.5s;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>GALERIA DE IMAGENES</h1>
+    </header>
+    <article>
+        <div>
+            <img src="madrid1.jpg" id="imagen">
+        </div>
+        <div>
+            <img src="madrid2.jpg" id="imagen"">
+        </div>
+        <div>
+            <img src=" madrid3.jpg" id="imagen">
+        </div>
+        <div>
+            <img src="madrid4.jpg" id="imagen">
+        </div>
+        <div>
+            <img src="madrid5.jpg" id="imagen">
+        </div>
+        <div>
+            <img src="madrid6.jpg" id="imagen">
+        </div>
+    </article>
+
+</body>
+
+</html>
